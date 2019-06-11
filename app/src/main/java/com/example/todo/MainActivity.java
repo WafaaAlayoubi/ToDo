@@ -23,11 +23,6 @@ public class MainActivity extends AppCompatActivity {
         imgHome = (ImageView) findViewById(R.id.home);
         imgGrid = (ImageView) findViewById(R.id.grid);
 
-        homeFragment = new Fragment_NoTasks();
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.fragment,homeFragment);
-        ft.commit();
 
         imgHome.setOnClickListener(new View.OnClickListener() {
             @Override

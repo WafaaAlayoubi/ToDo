@@ -5,25 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/header">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle3"
         android:adjustViewBounds="true"
-        android:id="@+id/header"/>
+       />
+    <LinearLayout
+        android:paddingTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/bell"/>
+    </LinearLayout>
+
+</RelativeLayout>
 
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.example.todo.Fragment_Default"
+        android:name="com.example.todo.Fragment_NoTasks"
         android:layout_below="@+id/header"
         android:layout_above="@+id/footer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"  />
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:paddingTop="10dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/footer"
@@ -44,7 +66,7 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/grid"
+            android:src="@drawable/grid2"
             android:id="@+id/grid"
             android:layout_weight="1"/>
 
