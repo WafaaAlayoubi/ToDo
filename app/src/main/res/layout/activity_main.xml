@@ -12,57 +12,40 @@
         android:src="@drawable/rectangle3"
         android:adjustViewBounds="true"
         android:id="@+id/header"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/noTask"
-        android:layout_gravity="center"
 
-        android:src="@drawable/group12"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/noTask"
-        android:src="@drawable/notasks"
-        android:layout_gravity="center"
-        />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/noTask"
-            android:src="@drawable/you"
-            android:layout_gravity="center"
-            />
-
-    </LinearLayout>
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.todo.Fragment_Default"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/footer"
         android:layout_alignParentBottom="true"
         android:weightSum="3">
 <ImageView
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:src="@drawable/home"
+    android:id="@+id/home"
     android:layout_weight="1"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:src="@drawable/button"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:id="@+id/add"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:src="@drawable/grid"
+            android:id="@+id/grid"
             android:layout_weight="1"/>
 
     </LinearLayout>
